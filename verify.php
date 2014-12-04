@@ -1,6 +1,6 @@
 <?php
   require_once('recaptchalib.php');
-  $privatekey = "6Lew7OASAAAAAL1XaSi9xTT4sg5de8FbqKCV8Cye";
+  $privatekey = "6Lew7OASAAAAAL1XaSi9xTT4sg5de8FbqKCV8Cye"; //Your Key Here
   $resp = recaptcha_check_answer ($privatekey,
                                 $_SERVER["REMOTE_ADDR"],
                                 $_POST["recaptcha_challenge_field"],
@@ -19,7 +19,7 @@
     $image_full_upload = $_POST["image_full_upload"];
     
     //set POST variables
-    $url = 'http://gingercomet.com/chat/';
+    $url = 'http://gingercomet.com/chat/'; //Your URL Here
     $fields = array(
     'message-text' => urlencode($message_text),
     'image-alt' => urlencode($image_alt),
