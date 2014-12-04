@@ -16,10 +16,10 @@
     //extract data from the post
     $message_text = $_POST["message-text"];
     $image_alt = $_POST["image-alt"];
-    $image_full_upload = $_POST["image_full_upload"];
+    $image_full_upload = $_FILES["image_full_upload"];
     
     //set POST variables
-    $url = 'http://gingercomet.com/chat/'; //Your URL Here
+    $url = 'http://chat.gingercomet.local.com/'; //Your URL Here
     $fields = array(
     'message-text' => urlencode($message_text),
     'image-alt' => urlencode($image_alt),
@@ -44,7 +44,7 @@
     //close connection
     curl_close($ch);
     
-    
+    header('Location: /');
     
     
   }

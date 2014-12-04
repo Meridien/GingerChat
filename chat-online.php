@@ -1,1 +1,0 @@
-<?php $chat_activated=1; ?>

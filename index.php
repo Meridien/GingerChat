@@ -1,8 +1,8 @@
 <?php
-
+error_reporting('all');
 include('allowed_ips.php');
-require_once('recaptchalib.php');
-$publickey = "6Lew7OASAAAAAOeVU4Dmh_I4UwPyUOwrElcj2GH1";
+//require_once('recaptchalib.php');
+//$publickey = "6Lew7OASAAAAAOeVU4Dmh_I4UwPyUOwrElcj2GH1";
 
 
 $ip = @$REMOTE_ADDR;
@@ -384,8 +384,8 @@ div.input-wrapper {
 
 if($secure==true){
 	echo '
-<form id="new-chat-post" method="post" action="'.$http_folder_path.'verify.php" enctype="multipart/form-data">
-	<textarea name="message-text"> </textarea>
+<form id="new-chat-post" method="post" action="'.$http_folder_path.'" enctype="multipart/form-data">
+	<textarea name="message-text"></textarea>
 	<div class="input-wrapper">
 		<label>Alt Text</label>
 		<input type="text" name="image-alt" id="image-alt" value="&nbsp;"/>
@@ -394,7 +394,6 @@ if($secure==true){
 		<input type="file" name="image_full_upload" id="image_full_upload" />
 		<br/>
 		<input type="submit" class="input-submit">
-		' . recaptcha_get_html($publickey) . '
 	</div>
 </form>
 ';
@@ -424,9 +423,6 @@ else {
 </div>
 
 </div>
-<?php
-include('ga.php');
-?>
 
 </body>
 </html>
