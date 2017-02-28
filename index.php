@@ -1,8 +1,6 @@
 <?php
 error_reporting('all');
 include('allowed_ips.php');
-//require_once('recaptchalib.php');
-//$publickey = "6Lew7OASAAAAAOeVU4Dmh_I4UwPyUOwrElcj2GH1";
 
 
 $ip = @$REMOTE_ADDR;
@@ -418,7 +416,6 @@ include('messages.php');
 }
 else {
 	echo "Chat is currently offline";
-	//include('messages.php');
 }?>
 </div>
 
